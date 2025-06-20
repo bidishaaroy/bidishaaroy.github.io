@@ -9,6 +9,10 @@ export default defineConfig({
     host: "::",
     port: 8080,
   },
+  base: '/',            
+  build: {
+    outDir: 'docs'      
+  },
   plugins: [
     react(),
   ],

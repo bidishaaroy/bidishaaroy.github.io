@@ -15,7 +15,7 @@ const About = () => {
             </div>
             
             <div className="relative">
-              <img src="dist/images/56d5013a-f2de-4452-8f14-d02d5f3d6145.png" alt="Aurora" className="rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300" />
+              <img src="images/56d5013a-f2de-4452-8f14-d02d5f3d6145.png" alt="Aurora" className="rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300" />
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-purple-600/20 rounded-lg"></div>
             </div>
           </div>

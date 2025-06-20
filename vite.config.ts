@@ -20,7 +20,7 @@ export default defineConfig(({ command }) => ({
     },
   },
   build: {
-    outDir: 'dist',
+    outDir: 'docs',
     assetsDir: 'assets',
   },
 }));

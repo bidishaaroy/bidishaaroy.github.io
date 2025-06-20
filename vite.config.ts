@@ -1,17 +1,15 @@
 
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/bidishaaroy.github.io/' : '/',
   server: {
     host: "::",
     port: 8080,
-  },
-  base: '/',            
-  build: {
-    outDir: 'docs'      
   },
   plugins: [
     react(),
@@ -21,4 +19,8 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-});
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+  },
+}));

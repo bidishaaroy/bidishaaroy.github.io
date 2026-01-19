@@ -2,8 +2,8 @@ import React from "react";
 
 type Project = {
   title: string;
-  imageSrc: string; 
-  href: string;     
+  imageSrc: string;
+  href: string;
 };
 
 const projects: Project[] = [
@@ -15,17 +15,17 @@ const projects: Project[] = [
   {
     title: "Space Explorer Hub",
     imageSrc: "/projects/spacex.jpg",
-    href: "https://github.com/CMPT-276-SUMMER-2025/final-project-11-stars", 
+    href: "https://cmpt-276-summer-2025.github.io/final-project-11-stars/",
   },
   {
     title: "HungryHungryHippos",
     imageSrc: "/projects/hippos.jpg",
-    href: "https://github.com/StormHacks2025-ghostpeppers/HungryHungryHippos", 
+    href: "https://github.com/StormHacks2025-ghostpeppers/HungryHungryHippos",
   },
   {
     title: "Personal Portfolio",
     imageSrc: "/projects/favicon.png",
-    href: "https://bidishaaroy.github.io/", 
+    href: "https://bidishaaroy.github.io/",
   },
 ];
 
@@ -38,61 +38,62 @@ const Projects = () => {
             My Projects
           </h2>
 
-          
           <div className="flex justify-center">
             <div className="w-full max-w-5xl">
+              {/* Hide scrollbar (webkit + firefox + old edge) */}
+              <style>{`
+                .hide-scrollbar::-webkit-scrollbar { display: none; }
+                .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+              `}</style>
+
               <div
                 className="
+                  hide-scrollbar
                   flex gap-6 overflow-x-auto pb-4
                   snap-x snap-mandatory scroll-smooth
                   px-1
-                  [-ms-overflow-style:none] [scrollbar-width:none]
+                  justify-start
                 "
               >
-                
-                <style>{`
-                  div::-webkit-scrollbar { display: none; }
-                `}</style>
-
                 {projects.map((p) => (
-                  <div key={p.title} className="snap-start shrink-0 flex justify-center">
-                    <a
-                      href={p.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                  <a
+                    key={p.title}
+                    href={p.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                      snap-start shrink-0
+                      block
+                      focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-2xl
+                    "
+                  >
+                    <div
                       className="
-                        block rounded-2xl
-                        focus:outline-none focus:ring-2 focus:ring-blue-500
+                        bg-zinc-800 border border-zinc-700
+                        rounded-2xl shadow-lg
+                        transition-all duration-300
+                        hover:shadow-2xl hover:-translate-y-0.5
+                        p-4
+                        w-56 sm:w-60
                       "
                     >
-                      <div
-                        className="
-                          bg-zinc-800 border border-zinc-700
-                          rounded-2xl shadow-lg
-                          hover:shadow-2xl transition-all duration-300
-                          hover:-translate-y-0.5
-                          p-4
-                        "
-                      >
-                        
-                        <div className="w-48 sm:w-56 md:w-60 aspect-square rounded-xl overflow-hidden bg-zinc-700">
-                          <img
-                            src={p.imageSrc}
-                            alt={p.title}
-                            className="w-full h-full object-cover"
-                            loading="lazy"
-                          />
-                          
-                          <div className="absolute inset-0" />
-                        </div>
-
-                        
-                        <p className="mt-3 text-center font-semibold text-gray-100">
-                          {p.title}
-                        </p>
+                      {/* Image box */}
+                      <div className="relative aspect-square rounded-xl overflow-hidden bg-zinc-700">
+                        <img
+                          src={p.imageSrc}
+                          alt={p.title}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                        {/* subtle tint overlay like your site style, but it won't block clicks */}
+                        <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-purple-600/10" />
                       </div>
-                    </a>
-                  </div>
+
+                      <p className="mt-3 text-center font-semibold text-gray-100">
+                        {p.title}
+                      </p>
+                    </div>
+                  </a>
                 ))}
               </div>
 

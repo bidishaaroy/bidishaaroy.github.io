@@ -8,13 +8,20 @@ const Hero = () => {
   };
 
   return (
-    <section
-      className="min-h-screen flex items-center justify-center pt-20 bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage: "url(/images/4b8c218b-7b6d-427a-bf5b-b4dd16bc6957.png)",
-      }}
-    >
-      <div className="container mx-auto px-6">
+    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+      
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
+        style={{
+          backgroundImage: "url(/images/4b8c218b-7b6d-427a-bf5b-b4dd16bc6957.png)",
+        }}
+      />
+
+      
+      <div className="absolute inset-0 pointer-events-none" />
+
+      
+      <div className="relative z-10 container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8 animate-fade-in">
             <img
@@ -34,7 +41,12 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in">
             <Button
-              onClick={() => scrollToSection("projects")}
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                scrollToSection("projects");
+              }}
               className="bg-black hover:bg-gray-800 text-white px-8 py-3 text-lg transition-all duration-300 hover:scale-105"
             >
               View Projects
@@ -45,6 +57,7 @@ const Hero = () => {
                 href="https://drive.google.com/uc?export=download&id=1BvxF09bWP90K1BEShJEGB2Re8tvQ4sPX"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
                 className="
                   inline-flex items-center justify-center gap-2 whitespace-nowrap
                   border-2 border-black rounded-md

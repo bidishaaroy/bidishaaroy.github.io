@@ -8,9 +8,11 @@ const About = () => {
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <p className="text-lg leading-relaxed text-zinc-50">
-                I'm a Computing Science student with experience in Python, C++, HTML, CSS and JavaScript.
-                In my free time, I like to read, watch football and anime.
+              <p className="text-md leading-relaxed text-zinc-50">
+                I'm a Computing Science student with experience in Python, C++, HTML, CSS, JavaScript and more. 
+                I enjoy problem-solving and using my skills to build applications using technologies like React, 
+                TypeScript, Node.js, and modern AI APIs to create real-world tools that are helpful to people.
+                In my free time, I enjoy reading, watching football and anime.
               </p>
             </div>
             

@@ -24,7 +24,7 @@ const Header = () => {
   return <header className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
-          <button onClick={scrollToTop} className="text-2xl font-bold text-black hover:text-blue-600 transition-colors cursor-pointer">My Portfolio</button>
+          <button onClick={scrollToTop} className="text-2xl font-bold text-black hover:text-blue-600 transition-colors cursor-pointer">Bidisha's Portfolio</button>
           
           <div className="hidden md:flex items-center space-x-8">
             <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-blue-600 transition-colors">

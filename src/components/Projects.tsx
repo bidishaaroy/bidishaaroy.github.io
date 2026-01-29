@@ -22,6 +22,16 @@ const projects: Project[] = [
     imageSrc: "/projects/hippos.jpg",
     href: "https://github.com/StormHacks2025-ghostpeppers/HungryHungryHippos",
   },
+    {
+    title: "AI Voice Assistant",
+    imageSrc: "/projects/VAA.jpg",
+    href: "https://github.com/bidishaaroy/AI-voice-assistant",
+  },
+    {
+    title: "Student Management System",
+    imageSrc: "/projects/sms.jpg",
+    href: "https://github.com/bidishaaroy/student-management-system",
+  },
   {
     title: "Personal Portfolio",
     imageSrc: "/projects/favicon.png",
@@ -40,7 +50,7 @@ const Projects = () => {
 
           <div className="flex justify-center">
             <div className="w-full max-w-5xl">
-              {/* Hide scrollbar (webkit + firefox + old edge) */}
+              
               <style>{`
                 .hide-scrollbar::-webkit-scrollbar { display: none; }
                 .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
@@ -75,9 +85,11 @@ const Projects = () => {
                         hover:shadow-2xl hover:-translate-y-0.5
                         p-4
                         w-56 sm:w-60
+                        h-80
+                        flex flex-col
                       "
                     >
-                      {/* Image box */}
+                      
                       <div className="relative aspect-square rounded-xl overflow-hidden bg-zinc-700">
                         <img
                           src={p.imageSrc}
@@ -85,13 +97,15 @@ const Projects = () => {
                           className="w-full h-full object-cover"
                           loading="lazy"
                         />
-                        {/* subtle tint overlay like your site style, but it won't block clicks */}
+                        
                         <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-purple-600/10" />
                       </div>
 
-                      <p className="mt-3 text-center font-semibold text-gray-100">
-                        {p.title}
-                      </p>
+                      <div className="flex-grow flex items-center justify-center">
+                        <p className="text-center text-md font-semibold text-gray-100">
+                          {p.title}
+                        </p>
+                      </div>
                     </div>
                   </a>
                 ))}

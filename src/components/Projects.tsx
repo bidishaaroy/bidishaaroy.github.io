@@ -28,7 +28,7 @@ const projects: Project[] = [
     href: "https://github.com/bidishaaroy/AI-voice-assistant",
   },
     {
-    title: "Student Management System",
+    title: "Student Management System (C++)",
     imageSrc: "/projects/sms.jpg",
     href: "https://github.com/bidishaaroy/student-management-system",
   },

@@ -54,7 +54,7 @@ const Hero = () => {
 
             <Button asChild variant="ghost" className="p-0">
               <a
-                href="https://drive.google.com/uc?export=download&id=1BvxF09bWP90K1BEShJEGB2Re8tvQ4sPX"
+                href="https://drive.google.com/uc?export=download&id=1IR1Ap1Xn8ZKyd8S3Gev0FWAZzYm5-J4i"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}

@@ -22,6 +22,11 @@ const projects: Project[] = [
     imageSrc: "/projects/hippos.jpg",
     href: "https://github.com/StormHacks2025-ghostpeppers/HungryHungryHippos",
   },
+  {
+    title: "EasyFit",
+    imageSrc: "/projects/easyfit.png",
+    href: "https://github.com/sunghan0626/cmpt363_group9_higher_fidelity",
+  },
     {
     title: "AI Voice Assistant",
     imageSrc: "/projects/VAA.jpg",

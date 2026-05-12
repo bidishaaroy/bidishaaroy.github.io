@@ -5,13 +5,13 @@ const Experience = () => {
     school: "Simon Fraser University",
     degree: "Bachelor of Computing Science",
     period: "2023 - Present",
-    description: "Activities and societies: Bangladeshi Students' Alliance (Vice President of Communications)",
+    description: "Activities and societies: SFU Robot Soccer (Software Developer), IT Support Specialist (FIC), Bangladeshi Students' Alliance (Vice President of Communications)",
     link: "https://www.sfu.ca/"
   }, {
     school: "Scholastica School",
     degree: "High School Diploma",
     period: "2018-2022",
-    description: "Activities and societies: Model United Nations (Delegate), Class Student Councilor, High School Honors Academic Achievement (11th grade), Active Member of the school Community Service club, Environmental club and Ted-Ed club",
+    description: "Activities and societies: Model United Nations (Delegate), Class Student Councilor, High School Honors Academic Achievement (11th grade), Member of the school Community Service club, Environmental club and Ted-Ed club     Internships: Dhaka Tribune, 2021 (Writing, Op-Ed and Editorials) ",
     link: "https://cacdn03.freeli.io/scholastica/index.php"
   }];
   
